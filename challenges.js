@@ -33,9 +33,10 @@ addOne(1) //=> 2
 addOne(-5) //=> -4
 -----------------------------------------------------------------*/
 // Your solution for 01-addOne here:
-function addOne(num) { 
-return num + 1};
 
+function addOne(n) {
+  return n + 1;
+}
 
 
 /*-----------------------------------------------------------------
@@ -57,6 +58,13 @@ addTwoNumbers('Hello', 5) //=> NaN
 -----------------------------------------------------------------*/
 // Your solution for 02-addTwoNumbers here:
 
+function addTwoNumbers(a, b) {
+  if (typeof a === 'number' && typeof b === 'number') {
+    return a + b;
+  } else {
+    return NaN;
+  }
+}
 
 /*-----------------------------------------------------------------
 Challenge: 03-sumNumbers
