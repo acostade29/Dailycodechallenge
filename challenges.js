@@ -73,7 +73,8 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called sumNumbers that accepts a single array of numbers and returns the sum of the numbers in the array.
+- Write a function called sumNumbers that accepts a single array of 
+numbers and returns the sum of the numbers in the array.
 - If the array is empty, return 0 (zero).
 
 Examples:
@@ -84,7 +85,13 @@ sumNumbers([2, 10, -5]) //=> 7
 sumNumbers([]) //=> 0
 -----------------------------------------------------------------*/
 // Your solution for 03-sumNumbers here:
-
+ function sumNumbers(num) {
+ total = 0;
+ Array.array.forEach(function (n) {
+   total += n;
+ });
+  return total;
+ } ;
 
 
 
@@ -96,7 +103,8 @@ Difficulty: Basic
 
 Prompt:
 
-- Write a function called addList that accepts any quantity of numbers as arguments, adds them together and returns the resulting sum.
+- Write a function called addList that accepts any quantity of numbers 
+as arguments, adds them together and returns the resulting sum.
 - Assume all parameters will be numbers.
 - If called with no arguments, return 0 (zero).
 
@@ -108,7 +116,13 @@ add(7,-12) //=> -5
 -----------------------------------------------------------------*/
 // Your solution for 04-addList here:
 
-
+function sumNumbers(Arr) {
+  let sum = 0;
+  Arr.forEach(function (n) {
+    sum += n;
+  });
+   return sum;
+  } ;
 
 
 
