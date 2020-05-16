@@ -145,6 +145,10 @@ computeRemainder(4,0) //=> Infinity
 computeRemainder(10.5, 3) //=> 1.5
 -----------------------------------------------------------------*/
 // Your solution for 05-computeRemainder:
+function computeRemainder(dividend, divisor) {
+  if (divisor === 0) return Infinity;
+  return dividend - (Math.floor(dividend / divisor) * divisor);
+}
 
 
 
@@ -169,7 +173,16 @@ range(5,2) //=> "First argument must be less than second"
 -----------------------------------------------------------------*/
 // Your solution for 06-range here:
 
-
+function range(start, finish) {
+  if (start > finish) return 'First argument must be less than second';
+  
+  var range = [];
+  for (var n = start; n < finish; n++) {
+    range.push(n);
+  }
+  
+  return range;
+}
 
 
 
@@ -188,7 +201,14 @@ reverseUpcaseString("SEI Rocks!"); //=> "!SKCOR IES"
 -----------------------------------------------------------------*/
 // Your solution for 07-reverseUpcaseString here:
 
-
+function reverseUpcaseString(str) {
+  var results = '';
+  for (var i = 0; i < str.length; i++) {
+   
+    results = str.charAt(i).toUpperCase() + results;
+  }
+  return results;
+}
 
 
 
@@ -209,7 +229,14 @@ removeEnds('a'); //=> "" (empty string)
 -----------------------------------------------------------------*/
 // Your solution for 08-removeEnds here:
 
-
+function removeEnds(str) {
+  if (str.length < 3) return '';
+  var result= '';
+  for (var i = 1; i < str.length - 1; i++) {
+    result += str.charAt(i);
+  }
+  return result;
+}
 
 
 
@@ -232,7 +259,18 @@ charCount('Today is fantastic!') //=> { T: 1, o: 1, d: 1, a: 3, y: 1, ' ': 2, i:
 -----------------------------------------------------------------*/
 // Your solution for 09-charCount here:
 
-
+function charCount(str) {
+  var result = {};
+  for (var i = 0; i < str.length; i++) {
+    var char = str.charAt(i);
+    if (result[char]) {
+      result[char]++;
+    } else {
+      result[char] = 1;
+    }
+  }
+  return result;
+}
 
 
 
@@ -257,9 +295,13 @@ formatWithPadding(42, '*', 10); //=> "********42"
 formatWithPadding(1234, '*', 3); //=> "1234"
 -----------------------------------------------------------------*/
 // Your solution for 10-formatWithPadding here:
-
-
-
+function formatWithPadding(int, char, length) {
+  var result = int.toFixed(0);
+  while (result.length < length) {
+    result = char + result;
+  }
+  return result;
+}
 
 
 /*-----------------------------------------------------------------
